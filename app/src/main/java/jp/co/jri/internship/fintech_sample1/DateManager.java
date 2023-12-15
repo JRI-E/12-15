@@ -26,6 +26,7 @@ public class DateManager {
         //当月のカレンダーに表示される前月分の日数を計算
         mCalendar.set(Calendar.DATE, 1);
         int dayOfWeek = mCalendar.get(Calendar.DAY_OF_WEEK) - 1;
+//        System.out.println(dayOfWeek);
         mCalendar.add(Calendar.DATE, -dayOfWeek);
 
         List<Date> days = new ArrayList<>();
