@@ -28,7 +28,7 @@ public class TapPagerAdapter extends FragmentStateAdapter {
         else if (position == 2) {
             fragment = new Tab3Fragment();
         } else if (position == 3) {
-            fragment = new Tab3Fragment();
+            fragment = new Tab4Fragment();
         }
         assert fragment != null;
         fragment.setArguments(bundle);

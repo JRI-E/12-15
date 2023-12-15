@@ -27,11 +27,13 @@ public class Main2Activity extends AppCompatActivity {
         pager.setAdapter(adapter);
 
         // TabLayoutとViewPager2を関連付ける（押下されたタブと内容表示を関連付ける）
+        String[] tabName = {"👛","📊", "📅", "◕"};
         TabLayout tabs = (TabLayout)findViewById(R.id.tab_layout);
+//        tabs.setTextSize(20);
         new TabLayoutMediator(
                 tabs,
                 pager,
-                (tab, position) -> tab.setText("TAB" + (position + 1))
+                (tab, position) -> tab.setText(tabName[position])
         ).attach();
     }
 }
