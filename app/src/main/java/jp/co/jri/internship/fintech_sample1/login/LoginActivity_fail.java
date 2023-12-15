@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 import androidx.lifecycle.ViewModelProvider;
 
-import jp.co.jri.internship.fintech_sample1.MainActivity;
+import jp.co.jri.internship.fintech_sample1.Main2Activity;
 import jp.co.jri.internship.fintech_sample1.R;
 
 public class LoginActivity_fail extends AppCompatActivity {
@@ -117,7 +117,7 @@ public class LoginActivity_fail extends AppCompatActivity {
     // ログイン認証が成功したとき
     private void updateUiWithUser(LoggedInUserView model) {
         String welcome = getString(R.string.welcome) + model.getDisplayName();
-        Intent intent = new Intent(this, MainActivity.class);  //インテントの作成
+        Intent intent = new Intent(this, Main2Activity.class);  //インテントの作成
         startActivity(intent);                                 //画面遷移
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show(); //トーストを画面表示してユーザへ通知
     }

@@ -18,7 +18,6 @@ import android.widget.Toast;
 
 import androidx.lifecycle.ViewModelProvider;
 
-//import jp.co.jri.internship.fintech_sample1.MainActivity;
 import jp.co.jri.internship.fintech_sample1.Main2Activity;
 import jp.co.jri.internship.fintech_sample1.R;
 
@@ -42,6 +41,8 @@ public class LoginActivity extends AppCompatActivity {
         final EditText passwordEditText = findViewById(R.id.password);
         final Button loginButton = findViewById(R.id.login);
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
+        // ここを追加した
+        final Button resetButton = findViewById(R.id.resetPassword);
 
         // 入力条件チェック結果に応じて表示を変更
         loginViewModel.getLoginFormState().observe(this, loginFormState -> {
@@ -113,20 +114,32 @@ public class LoginActivity extends AppCompatActivity {
                     passwordEditText.getText().toString(),
                     mContext);
         });
+
+        resetButton.setOnClickListener(v ->{
+
+        });
     }
 
     // ログイン認証が成功したとき
     private void updateUiWithUser(LoggedInUserView model) {
         String welcome = getString(R.string.welcome) + model.getDisplayName();
-        //変更
         Intent intent = new Intent(this, Main2Activity.class);  //インテントの作成
         startActivity(intent);                                 //画面遷移
-
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show(); //トーストを画面表示してユーザへ通知
     }
 
+
+    //この部分の処理を変更！！！！！！！！！！！！！！！！！！！
     // ログイン認証が失敗したとき
     private void showLoginFailed(@StringRes Integer errorString) {
-        Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show(); //トーストを画面表示してユーザへ通知
+//        Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show(); //トーストを画面表示してユーザへ通知
+        Intent intent;  //インテントの作成
+        intent = new Intent(this, LoginActivity_fail.class);
+        startActivity(intent);
+        overridePendingTransition(0, 0);
     }
+    //この部分の処理を変更！！！！！！！！！！！！！！！！！！！
+
+
+
 }
