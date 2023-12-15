@@ -14,6 +14,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.AdapterView; //追加
+import android.widget.Toast; //追加
 
 import java.io.File;
 import java.util.ArrayList;
@@ -136,13 +138,20 @@ public class Tab1Fragment extends Fragment {
                     getActivity(),
                     listData,                                           // ListView用に自作したレイアウトにFintechDataのどの項目を表示するかを指定する
                     R.layout.custom_list_layout,                        // 自作したレイアウト名
-                    new String[]{"transDate", "content", "amount"},     // 表示するFintechDataの項目を指定
-                    new int[]{R.id.tvList1, R.id.tvList2, R.id.tvList3} // 自作したレイアウトのViewのidを指定
+                    new String[]{"transDate", "content", "amount", "balance"},     // 表示するFintechDataの項目を指定
+                    new int[]{R.id.tvList1, R.id.tvList2, R.id.tvList3, R.id.tvList4} // 自作したレイアウトのViewのidを指定
             );
 
             // Adapterの内容をlistViewに表示する
             ListView lvHistoricalData = (ListView) view.findViewById(R.id.lvHistoricalData_frag); //Viewにプログラムでの変数名を割り当てる
             lvHistoricalData.setAdapter(adapter);   //Adapterの内容をlvHistoricalDataに表示する
+
+            lvHistoricalData.setOnItemClickListener((parent, view1, position, id) -> {
+                //ListView listView = (ListView) parent;
+                //String item = (String) listView.getItemAtPosition(position);
+                Intent intent = new Intent(getActivity().getApplicationContext(), Main3Activity.class);  //インテントの作成
+                startActivity(intent); //画面遷移
+            });
 
             // 収入の合計を出力する
             TextView tvIncome = (TextView) view.findViewById(R.id.tvIncome_frag);

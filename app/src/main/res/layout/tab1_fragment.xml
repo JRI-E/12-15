@@ -88,7 +88,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
@@ -98,29 +98,42 @@
                 android:textColor="#ffffff"
                 android:textSize="18sp" />
 
-            <TextView
-                android:layout_width="0dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#ffbb00"
-                android:gravity="center"
-                android:text="@string/date" />
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ffbb00"
+                    android:gravity="center"
+                    android:text="@string/date" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:background="#ffbb00"
-                android:gravity="center"
-                android:text="@string/contents" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="#ffbb00"
+                    android:gravity="center"
+                    android:text="@string/contents" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#ffbb00"
-                android:gravity="center"
-                android:text="@string/amount" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ffbb00"
+                    android:gravity="center"
+                    android:text="支出" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ffbb00"
+                    android:gravity="center"
+                    android:text="残高" />
+            </LinearLayout>
         </LinearLayout>
 
         <!-- 収支の表示領域 -->
