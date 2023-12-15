@@ -17,8 +17,7 @@
         android:layout_height="110dp"
         android:gravity="center" />
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -145,12 +144,13 @@
             <ListView
                 android:id="@+id/lvHistoricalData_frag"
                 android:layout_width="match_parent"
-                android:layout_height="300dp">
-            </ListView>
+                android:layout_height="400dp"></ListView>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#ffa500"
+                android:baselineAligned="false"
                 android:text="@string/budget"
                 android:textColor="#ffffff"
                 android:textSize="18sp" />
@@ -207,123 +207,10 @@
 
         </LinearLayout>
 
-        <!-- 最大支出の表示領域 -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#ffa500"
-            android:text="@string/max_spending"
-            android:textColor="#ffffff"
-            android:textSize="18sp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#ffbb00"
-                android:gravity="center"
-                android:text="@string/max_date" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#ffbb00"
-                android:gravity="center"
-                android:text="@string/max_dealer" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#ffbb00"
-                android:gravity="center"
-                android:text="@string/max_contents" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#ffbb00"
-                android:gravity="center"
-                android:text="@string/max_purpose" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#ffbb00"
-                android:gravity="center"
-                android:text="@string/max_amount" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/tvMaxTransDate_frag"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center" />
-
-            <TextView
-                android:id="@+id/tvMaxSupplier_frag"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center" />
-
-            <TextView
-                android:id="@+id/tvMaxContent_frag"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center" />
-
-            <TextView
-                android:id="@+id/tvMaxUse_frag"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center" />
-
-            <TextView
-                android:id="@+id/tvMaxAmount_frag"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center" />
-        </LinearLayout>
 
 
-        <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <!--        android:orientation="vertical"-->
-            <!--        tools:context=".Main2Activity">-->
 
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tab_layout_frag"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
 
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/pager_frag"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
-        </LinearLayout>
         <!--    <LinearLayout-->
         <!--        android:layout_width="match_parent"-->
         <!--        android:layout_height="match_parent"-->

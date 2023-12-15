@@ -76,6 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#ffa500"
+            android:fontFamily="sans-serif"
             android:text="@string/withdrawal_details"
             android:textColor="#ffffff"
             android:textSize="18sp" />
@@ -273,52 +274,6 @@
     </LinearLayout>
 
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-<!--        android:orientation="vertical"-->
-<!--        tools:context=".Main2Activity">-->
-
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tab_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/pager"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-    </LinearLayout>
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:gravity="center|bottom">-->
-<!--        &lt;!&ndash; Auto layout, variables, and unit scale are not yet supported &ndash;&gt;-->
-
-<!--        &lt;!&ndash; Auto layout, variables, and unit scale are not yet supported &ndash;&gt;-->
-<!--        <Button-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:background="#507A2F"-->
-<!--            android:text="tab2" />-->
-<!--        <Button-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:background="#507A2F"-->
-<!--            android:text="ホーム" />-->
-<!--        <Button-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:background="#507A2F"-->
-<!--            android:layout_weight="1"-->
-<!--            android:text="tab3" />-->
-<!--    </LinearLayout>-->
 
 
 </LinearLayout>

@@ -146,12 +146,12 @@ public class Tab1Fragment extends Fragment {
             ListView lvHistoricalData = (ListView) view.findViewById(R.id.lvHistoricalData_frag); //Viewにプログラムでの変数名を割り当てる
             lvHistoricalData.setAdapter(adapter);   //Adapterの内容をlvHistoricalDataに表示する
 
-            lvHistoricalData.setOnItemClickListener((parent, view1, position, id) -> {
-                //ListView listView = (ListView) parent;
-                //String item = (String) listView.getItemAtPosition(position);
-                Intent intent = new Intent(getActivity().getApplicationContext(), Main3Activity.class);  //インテントの作成
-                startActivity(intent); //画面遷移
-            });
+//            lvHistoricalData.setOnItemClickListener((parent, view1, position, id) -> {
+//                ListView listView = (ListView) parent;
+//                String item = (String) listView.getItemAtPosition(position);
+//                Intent intent = new Intent(getActivity().getApplicationContext(), Tab3Fragment.class);  //インテントの作成
+//                startActivity(intent); //画面遷移
+//            });
 
             // 収入の合計を出力する
             TextView tvIncome = (TextView) view.findViewById(R.id.tvIncome_frag);
@@ -161,20 +161,7 @@ public class Tab1Fragment extends Fragment {
             TextView tvExpense = (TextView) view.findViewById(R.id.tvExpense_frag);
             tvExpense.setText(String.format("%,d", sumExpense));
 
-            // 最大支出を表示する（各要素を紐づけ→値を反映）
-            TextView tvMaxTransDate = (TextView) view.findViewById(R.id.tvMaxTransDate_frag);
-            TextView tvMaxSupplier = (TextView) view.findViewById(R.id.tvMaxSupplier_frag);
-            TextView tvMaxContent = (TextView) view.findViewById(R.id.tvMaxContent_frag);
-            TextView tvMaxUse = (TextView) view.findViewById(R.id.tvMaxUse_frag);
-            TextView tvMaxAmount = (TextView) view.findViewById(R.id.tvMaxAmount_frag);
 
-            tvMaxTransDate.setText(maxTransDate);
-            tvMaxSupplier.setText(maxSupplier);
-            tvMaxContent.setText(maxContent);
-            tvMaxUse.setText(maxUse);
-            tvMaxAmount.setText(String.format("%,d", maxAmount));
-
-            System.out.println(maxAmount);
         }
 
         // Adapterに渡す形式のlist型変数の宣言と初期化
