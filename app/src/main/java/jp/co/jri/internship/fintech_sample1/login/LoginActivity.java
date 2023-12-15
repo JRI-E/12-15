@@ -116,7 +116,8 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         resetButton.setOnClickListener(v ->{
-
+            Intent intent = new Intent(this, ResetActivity.class);
+            startActivity(intent);
         });
     }
 

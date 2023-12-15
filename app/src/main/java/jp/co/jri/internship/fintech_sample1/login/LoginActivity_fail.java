@@ -41,6 +41,8 @@ public class LoginActivity_fail extends AppCompatActivity {
         final EditText passwordEditText = findViewById(R.id.password);
         final Button loginButton = findViewById(R.id.login);
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
+        // ここを追加した
+        final Button resetButton = findViewById(R.id.resetPassword);
 
         // 入力条件チェック結果に応じて表示を変更
         loginViewModel.getLoginFormState().observe(this, loginFormState -> {
@@ -111,6 +113,11 @@ public class LoginActivity_fail extends AppCompatActivity {
             loginViewModel.login(userIdEditText.getText().toString(),
                     passwordEditText.getText().toString(),
                     mContext);
+        });
+
+        resetButton.setOnClickListener(v ->{
+            Intent intent = new Intent(this, ResetActivity.class);
+            startActivity(intent);
         });
     }
 
